@@ -609,7 +609,7 @@ def _get_shebang(interpreter, task_vars, templar, args=tuple(), remote_is_local=
             interpreter_out = templar.template(interpreter_from_config.strip())
 
             # handle interpreter discovery if requested or empty interpreter was provided
-            if not interpreter_out or interpreter_out in ['auto', 'auto_legacy', 'auto_silent', 'auto_legacy_silent']:
+            if not interpreter_out or interpreter_out in C.INTERPRETER_DISCOVERY_MODES:
 
                 discovered_interpreter_config = u'discovered_interpreter_%s' % interpreter_name
                 facts_from_task_vars = task_vars.get('ansible_facts', {})

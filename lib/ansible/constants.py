@@ -177,6 +177,7 @@ INTERNAL_STATIC_VARS = frozenset(
         "role_names",
     ]
 )
+INTERPRETER_DISCOVERY_MODES = frozenset({'auto_legacy_silent', 'auto_legacy', 'auto_silent', 'auto'})
 LOCALHOST = ('127.0.0.1', 'localhost', '::1')
 WIN_MOVED = ['ansible.windows.win_command', 'ansible.windows.win_shell']
 MODULE_REQUIRE_ARGS_SIMPLE = ['command', 'raw', 'script', 'shell', 'win_command', 'win_shell']
